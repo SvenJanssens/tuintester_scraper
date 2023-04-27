@@ -1,18 +1,16 @@
 from bs4 import BeautifulSoup
 import requests
 import re
-import tomllib
+import json
+import tomli
 
 with open("config.toml", "rb") as f:
-    login = tomllib.load("login")
-    password = tomllib.load("password")
-    dashboard_days = tomllib.load("dashboard_days")
-
+    config = tomli.load(f)
 
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 
-data = {'user[email]': login,
-        'user[password]': password,
+data = {'user[email]': config["login"],
+        'user[password]': config["password"],
         'user[remember_me]': "0",
         'commit': 'Login'}
 
@@ -26,7 +24,7 @@ with requests.session() as sess:
     res = sess.post("https://dashboard.wetlands4cities.be/users/sign_in", data=data, headers=headers)
     
     #Check login
-    res = sess.get('https://dashboard.wetlands4cities.be/dashboard?days=' + dashboard_days)
+    res = sess.get('https://dashboard.wetlands4cities.be/dashboard?days=' + config["dashboard_days"])
 
     soup = BeautifulSoup(res.text, 'html.parser')  
 
@@ -35,7 +33,7 @@ with requests.session() as sess:
     except:
         print ('Your username or password is incorrect')
     else:
-        print ("You have successfully logged in as", login)
+        print ("You have successfully logged in as", config["login"])
         script = str(script[0])
         begin = script.find("window.chart_data") + 20
         end = script.find("} ;") + 1

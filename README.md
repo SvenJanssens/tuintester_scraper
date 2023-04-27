@@ -6,7 +6,7 @@ There is no API provided, so it was necessary to write a scraper to access this 
 
 The data is only uploaded from the sensor to the dashboard around midnight, so it doesn't make sense to run the scraper more than once a day.
 
-The result of the code results in the variables chart_data and temperaturs containing a JSON string with the extracted data.
+The code results in the variables chart_data and temperaturs containing a JSON string with the extracted data.
 
 ## chart_data
 chart_data contains the following data series:

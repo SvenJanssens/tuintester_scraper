@@ -1,6 +1,6 @@
 # tuintester_scraper
 
-Participating with the Belgian Tuintester project (part of the European wide program Wetlands4Cities), I wanted to extract the data shown on the website https://dashboard.wetlands4cities.be/dashboard and log it locally.
+Participating with the Belgian Tuintester project (part of the European wide program Wetlands4Cities - more info here: https://www.mechelen.be/tuintesters), I wanted to extract the data shown on the website https://dashboard.wetlands4cities.be/dashboard and log it locally.
 
 There is no API provided, so it was necessary to write a scraper to access this data.
 

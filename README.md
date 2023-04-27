@@ -32,15 +32,15 @@ This interval increases to 4 hours for longer periods.<br/>
 ## temperaturs
 temperaturs contains the following derived data:<br/>
   {<br/>
-    "min_t1":<float>,<br/>
-    "max_t1":<float>,<br/>
-    "mean_t1":<float>,<br/>
-    "min_t2":<float>,<br/>
-    "max_t2":<float>,<br/>
-    "mean_t2":<float>,<br/>
-    "min_t3":<float>,<br/>
-    "max_t3":<float>,<br/>
-    "mean_t3":<float><br/>
+    "min_t1":float value,<br/>
+    "max_t1":float value,<br/>
+    "mean_t1":float value,<br/>
+    "min_t2":float value,<br/>
+    "max_t2":float value,<br/>
+    "mean_t2":float value,<br/>
+    "min_t3":float value,<br/>
+    "max_t3":float value,<br/>
+    "mean_t3":float value<br/>
   }<br/>
 
 ## config.toml

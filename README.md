@@ -16,8 +16,8 @@ chart_data contains the following data series:
 - humidity : soil humidity
 
 Depending on for how many days the dashboard needs to show data points the time interval changes.<br/>
-F.e.: If you request data for 7 days, then you get data points for every hour. <br/>
-This interval increases to 4 hours for longer periods.<br/>
+F.e.: If you request data for 7 or 30 days, then you get data points for every 15 minutes. <br/>
+If you request data for 90, 365 days or everything, then you get data points for every 4 hours.<br/>
 { <br/>
   "serie": [ <br/>
     {<br/>

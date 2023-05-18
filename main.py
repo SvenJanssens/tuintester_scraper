@@ -58,4 +58,7 @@ with requests.session() as sess:
         #   ...
         # }
 
-        print("Chart Data:", chart_data)
+        chart_json = json.loads(chart_data)
+
+        with open('data.json', 'w', encoding='utf-8') as f:
+            json.dump(chart_json, f, ensure_ascii=False, indent=4)

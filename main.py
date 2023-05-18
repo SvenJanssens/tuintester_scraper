@@ -58,20 +58,4 @@ with requests.session() as sess:
         #   ...
         # }
 
-        begin = script.find("window.temperaturs") + 21
-        end = script.find("} ;", begin) + 1
-        temperaturs = script[begin:end]
-        # temperaturs contains the following derived data:
-        #   {
-        #       "min_t1":<float>,
-        #       "max_t1":<float>,
-        #       "mean_t1":<float>,
-        #       "min_t2":<float>,
-        #       "max_t2":<float>,
-        #       "mean_t2":<float>,
-        #       "min_t3":<float>,
-        #       "max_t3":<float>,
-        #       "mean_t3":<float>
-        #   }
         print("Chart Data:", chart_data)
-        print("Derived:", temperaturs)

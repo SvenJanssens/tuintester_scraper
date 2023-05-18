@@ -29,20 +29,6 @@ If you request data for 90, 365 days or everything, then you get data points for
   ...<br/>
 }<br/>
 
-## temperaturs
-temperaturs contains the following derived data:<br/>
-  {<br/>
-    "min_t1":float value,<br/>
-    "max_t1":float value,<br/>
-    "mean_t1":float value,<br/>
-    "min_t2":float value,<br/>
-    "max_t2":float value,<br/>
-    "mean_t2":float value,<br/>
-    "min_t3":float value,<br/>
-    "max_t3":float value,<br/>
-    "mean_t3":float value<br/>
-  }<br/>
-
 ## config.toml
 To make it run, you will need to add a config.toml file to the project. It should contain the following lines:<br/>
 login = "email used to logon to the dashboard"<br/>
